@@ -32,20 +32,15 @@ class Stack<T = any> {
 const s = new Stack();
 
 console.log("Adding elements... [1..5]");
-s.push(1);
-s.push(2);
-s.push(3);
-s.push(4);
-s.push(5);
+for (let i = 1; i <= 5; i++) {
+  s.push(i);
+}
 
-s.print();
-
-console.log("Peeking element:", s.peek());
-
-console.log("Popping element:", s.pop());
 s.print();
 
 console.log("Clearing the stack...");
 while (!s.isEmpty()) {
   console.log("Popping element:", s.pop());
 }
+
+console.log("Stack is empty:", s.isEmpty());
